@@ -149,6 +149,7 @@ function getAccounts(master) {
   if (typeof encryptedAccounts !== 'undefined') {
     var bytes = crypto.AES.decrypt(encryptedAccounts, master);
     accounts = JSON.parse(bytes.toString(crypto.enc.Utf8));
+    //accounts = JSON.parse(bytes.toString());
   }
   return accounts;
 }
